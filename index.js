@@ -7,7 +7,7 @@ const inquirer = require('inquirer');
 clear();
 console.log(
   chalk.yellow(
-    figlet.textSync('Ginit', { horizontalLayout: })
+    figlet.textSync('Ginit', { horizontalLayout: 'full' })
   )
 );
 
