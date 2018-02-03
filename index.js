@@ -17,7 +17,11 @@ if (files.directoryExists('.git')){
 }
 
 const run = async () => {
-  const credentials = await inquirer.askGithubCredentials();
-  console.log(credentials);
+  let token = github.getStoredGithubToken();
+  if(!token) {
+    await github.setGithubCredentials();
+    token = await github.registerNewToken();
+  }
+  console.log(token);
 }
 run();
