@@ -1,7 +1,7 @@
 {
   "name": "ginit",
   "version": "1.0.0",
-  "description": "\"git init\" on the command line for a good time",
+  "description": "\"git init\" on steroids",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -10,10 +10,13 @@
     "Git",
     "CLI"
   ],
-  "author": "Sandro Braidotti",
+  "author": "Lukas White <hello@lukaswhite.com>, Michael Wanyoike <micwanyoike@gmail.com>",
   "license": "ISC",
+  "bin": {
+    "ginit": "./index.js"
+  },
   "dependencies": {
-    "@octokit/rest": "^14.0.7",
+    "@octokit/rest": "^14.0.5",
     "chalk": "^2.3.0",
     "clear": "0.0.1",
     "clui": "^0.3.6",
@@ -24,8 +27,5 @@
     "minimist": "^1.2.0",
     "simple-git": "^1.89.0",
     "touch": "^3.1.0"
-  },
-  "bin": {
-  "ginit": "./index.js"
   }
 }
