@@ -24,4 +24,20 @@ const run = async () => {
   }
   console.log(token);
 }
+
+const getGithubToken = async () => {
+  // Fetch token from config store
+  let token = github.getStoredGithubToken();
+  if(token) {
+    return token;
+  }
+
+  // No token found, use credentials to access GitHub account
+  await github.setGithubCredentials();
+
+  // register new token
+  token = await github.registerNewToken();
+  return token;
+}
+
 run();
